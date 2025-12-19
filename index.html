@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manga Reader - Discord Activity</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/@discord/embedded-app-sdk@^1.0.0"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-content">
+                <h1 class="title">
+                    <i class="fas fa-book-open"></i>
+                    MANGA READER
+                </h1>
+                <p class="subtitle">Read manga together in voice channels</p>
+            </div>
+            <div class="header-actions">
+                <button id="statusBtn" class="status-btn">
+                    <i class="fas fa-play-circle"></i>
+                    Set Activity Status
+                </button>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="activity-card">
+                <div class="card-header">
+                    <h2><i class="fas fa-book"></i> Currently Reading</h2>
+                    <span class="badge">LIVE</span>
+                </div>
+                <div class="manga-display">
+                    <div class="manga-cover">
+                        <div class="cover-image">
+                            <i class="fas fa-book-open fa-3x"></i>
+                        </div>
+                        <div class="cover-title">One Piece</div>
+                        <div class="cover-chapter">Chapter 1090</div>
+                    </div>
+                    <div class="manga-info">
+                        <h3 class="manga-title">One Piece <span class="status-indicator">●</span></h3>
+                        <div class="progress-section">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 65%"></div>
+                            </div>
+                            <div class="progress-text">65% complete</div>
+                        </div>
+                        <div class="stats">
+                            <div class="stat">
+                                <i class="fas fa-users"></i>
+                                <span>4 readers</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-clock"></i>
+                                <span>45 min</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-star"></i>
+                                <span>9.2/10</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="controls">
+                <div class="control-group">
+                    <h3><i class="fas fa-compass"></i> Navigation</h3>
+                    <div class="button-grid">
+                        <button class="nav-btn">
+                            <i class="fas fa-backward"></i>
+                            Previous
+                        </button>
+                        <button class="nav-btn primary">
+                            <i class="fas fa-play"></i>
+                            Read Now
+                        </button>
+                        <button class="nav-btn">
+                            Next
+                            <i class="fas fa-forward"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <h3><i class="fas fa-bookmark"></i> Quick Access</h3>
+                    <div class="quick-access">
+                        <button class="quick-btn">
+                            <i class="fas fa-search"></i>
+                            Search
+                        </button>
+                        <button class="quick-btn">
+                            <i class="fas fa-list"></i>
+                            Library
+                        </button>
+                        <button class="quick-btn">
+                            <i class="fas fa-cog"></i>
+                            Settings
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="readers-section">
+                <h3><i class="fas fa-user-friends"></i> Currently Reading</h3>
+                <div class="readers-list">
+                    <div class="reader">
+                        <div class="reader-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="reader-info">
+                            <div class="reader-name">Alex</div>
+                            <div class="reader-status">Page 24</div>
+                        </div>
+                    </div>
+                    <div class="reader">
+                        <div class="reader-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="reader-info">
+                            <div class="reader-name">Sam</div>
+                            <div class="reader-status">Page 18</div>
+                        </div>
+                    </div>
+                    <div class="reader">
+                        <div class="reader-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="reader-info">
+                            <div class="reader-name">Jordan</div>
+                            <div class="reader-status">Page 32</div>
+                        </div>
+                    </div>
+                    <div class="reader">
+                        <div class="reader-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="reader-info">
+                            <div class="reader-name">Taylor</div>
+                            <div class="reader-status">Page 15</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="status-message" id="statusMessage">
+                <i class="fas fa-check-circle"></i>
+                <span>Activity status updated successfully!</span>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>Manga Reader Activity • Discord Embedded App • Made with <i class="fas fa-heart"></i></p>
+            <div class="footer-links">
+                <a href="#" class="footer-link">Guide</a>
+                •
+                <a href="#" class="footer-link">Support</a>
+                •
+                <a href="#" class="footer-link">GitHub</a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
